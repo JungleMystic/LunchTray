@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lunch Tray</string>
+
+    <string name="start_order">Start Order</string>
+    <string name="main_courses">Main Courses</string>
+    <string name="side_dishes">Side Dishes</string>
+    <string name="snacks">Snacks</string>
+    <string name="next">Next</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="order_summary">Order Summary</string>
+    <string name="sample_price">₹ 140</string>
+    <string name="price">₹ %1$d</string>
+    <string name="subtotal"><b>Subtotal:</b> ₹ %1$d</string>
+    <string name="tax"><b>Tax:</b> ₹ %1$s</string>
+    <string name="total">Total: ₹ %1$s</string>
+    <string name="submit_order">Submit Order</string>
+    <string name="cancel_order">Cancel Order</string>
+
+</resources>

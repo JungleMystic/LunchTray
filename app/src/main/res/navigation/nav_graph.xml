@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.lrm.lunchtray.fragments.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.lrm.lunchtray.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_mainCourseFragment"
+            app:destination="@id/mainCourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainCourseFragment"
+        android:name="com.lrm.lunchtray.fragments.MainCourseFragment"
+        android:label="MainCourseFragment"
+        tools:layout="@layout/fragment_main_course">
+        <action
+            android:id="@+id/action_mainCourseFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainCourseFragment_to_sideDishFragment"
+            app:destination="@id/sideDishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sideDishFragment"
+        android:name="com.lrm.lunchtray.fragments.SideDishFragment"
+        android:label="SideDishFragment"
+        tools:layout="@layout/fragment_side_dish">
+        <action
+            android:id="@+id/action_sideDishFragment_to_snacksFragment"
+            app:destination="@id/snacksFragment" />
+        <action
+            android:id="@+id/action_sideDishFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/snacksFragment"
+        android:name="com.lrm.lunchtray.fragments.SnacksFragment"
+        android:label="SnacksFragment"
+        tools:layout="@layout/fragment_snacks">
+        <action
+            android:id="@+id/action_snacksFragment_to_orderSummaryFragment"
+            app:destination="@id/orderSummaryFragment" />
+        <action
+            android:id="@+id/action_snacksFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSummaryFragment"
+        android:name="com.lrm.lunchtray.fragments.OrderSummaryFragment"
+        android:label="OrderSummaryFragment"
+        tools:layout="@layout/fragment_order_summary">
+        <action
+            android:id="@+id/action_orderSummaryFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
